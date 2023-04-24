@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+   <title>街机大玩家</title>
+</head>
+
+<body>
+   <div class="top_box">
+      <div class="content">
+         <div id="top">
+            <img src="./imgs/img_icon.png" class="top_icon">
+            <div class="top_link">
+               <a class="link_text">官网首页</a>
+               <a id="link1" class="link_text">应用程序</a>
+               <a id="link2" class="link_text">产品展示</a>
+               <a id="link3" class="link_text">联系我们</a>
+            </div>
+         </div>
+         <div class="top_left">
+            <p class="top_left_title">超好玩的线上</p>
+            <p class="top_left_title">经典街机平台！</p>
+            <p class="top_left_text">超多潮品娃娃等你来抓，更有酷炫武器射 击街机、真实机器JP奖励～</p>
+            <div id="download_btn">
+               <p class="downNow">点击下载</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="main">
+      <div class="main_box">
+         <div id="main_top">
+            <p class="main_top_title">应用程序</p>
+            <p class="main_top_subtitle">APP应用下载</p>
+            <div class="main_top_special">
+               <img src="./imgs/img_phone.png" class="main_top_phone">
+               <div class="main_top_right">
+                  <p class="main_top_right_title">街机大玩家，超好玩的线上街机平台，经典玩不停，潮品大收集！</p>
+                  <p class="main_top_right_subtitle">高质量娃娃种类丰富，靠谱娃娃机惊喜不断</p>
+                  <p class="main_top_right_subtitle">万圣夜困难重重，射击挑战赢取战利品</p>
+                  <p class="main_top_right_subtitle">经典推币机高清低延迟，随时随地快乐JP</p>
+                  <div id="download_ios">
+                     <p class="downios">iOS下载</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="main_bottom">
+            <p class="main_bottom_title">产品展示</p>
+            <p class="main_top_subtitle">超好玩的线上经典街机平台~</p>
+            <div class="main_bottom_screenshot">
+               <p class="screenshot_text1">超萌娃娃，潮品收集</p>
+               <p class="screenshot_text2">高清机器，超爽体验</p>
+               <p class="screenshot_text3">娃娃好抓，送货到家</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="bottom_fill"></div>
+   <div id="footer">
+      <div class="content">
+         <p class="footer_text1">健康游戏忠告：抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+         <div class="row_box">
+            <p class="footer_text2">版权所有者：杭州朗图科技有限公司</p>
+            <div class="footer_box">
+               <p>网站备案信息：</p>
+               <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602010150">浙公网安备
+                  33010602010150号</a>
+               <a href="https://beian.miit.gov.cn/#/Integrated/index">浙ICP备17040946号</a>
+            </div>
+         </div>
+         <a href="mailto:gyh230412@163.com" class="footer_text4">联系方式：gyh230412@163.com</a>
+         <a href="./agreement.html" class="footer_text5">用户协议</a>
+      </div>
+   </div>
+</body>
+<script>
+   window.onload = function () {
+      var link1 = document.querySelector('#link1')
+      var to1 = document.querySelector('#main_top')
+      var link2 = document.querySelector('#link2')
+      var to2 = document.querySelector('#main_bottom')
+      var link3 = document.querySelector('#link3')
+      var to3 = document.querySelector('#footer')
+      function to(toE1) {
+         let bridge = toE1;
+         let body = document.body;
+         let height = 0;
+
+         // 计算 dom节点到body顶部距离
+         do {
+            height += bridge.offsetTop;
+            bridge = bridge.offsetParent;
+         } while (bridge !== body)
+
+         // 滚动到指定位置
+         window.scrollTo({
+            top: height,
+            behavior: 'smooth'
+         })
+      }
+      link1.addEventListener("click", function () {
+         to(to1)
+      })
+      link2.addEventListener("click", function () {
+         to(to2)
+      })
+      link3.addEventListener("click", function () {
+         to(to3)
+      })
+      document.getElementById('download_btn').addEventListener('click', function () {
+         window.location.href = 'https://itunes.apple.com/app/id6447850309';
+      })
+      document.getElementById('download_ios').addEventListener('click', function () {
+         window.location.href = 'https://itunes.apple.com/app/id6447850309';
+      })
+   };
+
+</script>
+<style>
+   * {
+      margin: 0;
+      padding: 0;
+   }
+
+   body {
+      background-color: #fff;
+   }
+
+   .content {
+      width: 1200px;
+      margin: 0 auto;
+      position: relative;
+   }
+
+   .top_box {
+      width: 1920px;
+      height: 917px;
+      background: url('./imgs/img_top.png') no-repeat;
+      background-size: cover;
+      position: relative;
+   }
+
+   #top {
+      width: 100%;
+      height: 96px;
+      position: relative;
+      display: flex;
+      padding-top: 59px;
+   }
+
+   .top_icon {
+      width: 476px;
+      height: 96px;
+      position: relative;
+
+   }
+
+   .top_link {
+      width: 645px;
+      height: 23px;
+      position: relative;
+      left: 258px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+   }
+
+   .top_link a {
+      line-height: 96px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: 400;
+      color: #40210F;
+   }
+
+   .top_left {
+      position: relative;
+      margin-top: 150px;
+      left: 29px;
+   }
+
+   .top_left_title {
+      font-size: 56px;
+      font-weight: bold;
+      color: #40210F;
+   }
+
+   .top_left_text {
+      width: 431px;
+      line-height: 40px;
+      position: relative;
+      margin-top: 39px;
+      font-size: 24px;
+      font-weight: 400;
+      color: #40210F;
+   }
+
+   #download_btn {
+      width: 230px;
+      height: 71px;
+      background: linear-gradient(180deg, #FE8439 0%, #EB4B34 99%);
+      position: relative;
+      margin-top: 37px;
+      cursor: pointer;
+   }
+
+   .downNow {
+      text-align: center;
+      line-height: 71px;
+      font-size: 34px;
+      font-weight: 500;
+      color: #FFFFFF;
+   }
+
+   .main {
+      width: 1920px;
+      height: 2511px;
+      position: relative;
+      background: url('./imgs/img_decor.png') no-repeat;
+      background-size: 100%;
+   }
+
+   .main_box {
+      width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
+   }
+
+   .main_top_special {
+      display: flex;
+      flex-direction: row;
+   }
+
+   .main_top_title {
+      font-size: 60px;
+      position: relative;
+      margin-top: 162px;
+      color: #384368;
+      font-weight: bold;
+   }
+
+   .main_top_subtitle {
+      font-size: 30px;
+      position: relative;
+      margin-top: 36px;
+      color: #384368;
+      font-weight: 400;
+   }
+
+   .main_top_phone {
+      width: 443px;
+      height: 837px;
+      position: relative;
+      margin-top: 86px;
+      left: 18px;
+   }
+
+   .main_top_right {
+      width: 683px;
+      height: 98px;
+      position: relative;
+   }
+
+   .main_top_right_title {
+      text-align: left;
+      position: relative;
+      left: 34px;
+      margin-top: 215px;
+      font-size: 36px;
+      font-weight: bold;
+      color: #384368;
+      line-height: 62px;
+      margin-bottom: 52px;
+   }
+
+   .main_top_right_subtitle {
+      position: relative;
+      text-align: left;
+      left: 35px;
+      font-size: 20px;
+      font-weight: 400;
+      color: #384368;
+      line-height: 62px;
+   }
+
+   #download_ios {
+      width: 313px;
+      height: 92px;
+      cursor: pointer;
+      background: linear-gradient(180deg, #FE8439 0%, #EB4B34 99%);
+      position: relative;
+      margin-top: 117px;
+      left: 12px;
+   }
+
+   .downios {
+      font-size: 36px;
+      text-align: center;
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 92px;
+   }
+
+   .main_bottom_title {
+      font-size: 60px;
+      position: relative;
+      margin-top: 173px;
+      color: #384368;
+      font-weight: bold;
+   }
+
+   .main_bottom_screenshot {
+      width: 1118px;
+      height: 740px;
+      position: relative;
+      margin-top: 96px;
+      background: url('./imgs/img_screenshot.png') no-repeat;
+      background-size: 100%;
+   }
+
+   .screenshot_text1 {
+      font-size: 20px;
+      font-weight: 400;
+      color: #666666;
+      position: absolute;
+      left: 94px;
+      bottom: 84px;
+   }
+
+   .screenshot_text2 {
+      font-size: 20px;
+      font-weight: 400;
+      color: #666666;
+      position: absolute;
+      left: 470px;
+      bottom: 84px;
+   }
+
+   .screenshot_text3 {
+      font-size: 20px;
+      font-weight: 400;
+      color: #666666;
+      position: absolute;
+      right: 94px;
+      bottom: 84px;
+   }
+
+   .bottom_fill {
+      width: 1920px;
+      height: 79px;
+      position: relative;
+   }
+
+   #footer {
+      width: 1920px;
+      height: 160px;
+      background: #28282E;
+      position: relative;
+   }
+
+   .footer_text1 {
+      font-size: 12px;
+      font-weight: 400;
+      color: #FFFFFF;
+      padding-top: 44px;
+   }
+
+   .footer_text2 {
+      font-size: 12px;
+      font-weight: 400;
+      color: #FFFFFF;
+      margin-top: 17px;
+   }
+
+   .row_box {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 10px;
+   }
+
+   .footer_box {
+      display: inline-block;
+      margin-top: 13px;
+      margin-left: 37px;
+   }
+
+   .footer_box p {
+      display: inline;
+      font-size: 12px;
+      font-weight: 400;
+      color: #FFFFFF;
+   }
+
+   .footer_box a {
+      display: inline;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 400;
+      color: #FFFFFF;
+   }
+
+   .footer_text4 {
+      font-size: 12px;
+      font-weight: 400;
+      color: #FFFFFF;
+      text-decoration: none;
+      cursor: pointer;
+   }
+
+   .footer_text5 {
+      text-decoration: none;
+      cursor: pointer;
+      position: absolute;
+      top: 44px;
+      right: 0;
+      font-size: 15px;
+      font-weight: 400;
+      color: #FFFFFF;
+   }
+</style>
+
+</html>
